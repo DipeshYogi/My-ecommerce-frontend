@@ -1,0 +1,285 @@
+/* .myorders{
+    padding-top:140px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: #f2f2f2;
+    padding-bottom: 20px;
+    height: 100vh;
+}
+
+.myorders > h2{
+    font-family: "Roboto";
+}
+
+.myorders__tabs{
+     display: flex;
+     justify-content: center;
+}
+
+.tabLabels{
+    font-size: 14px;
+}
+
+.currentOrder{
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.currentOrder__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:10px;
+}
+
+.currentOrder__content{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.45);
+    padding:10px;
+    border-radius: 10px;
+    height: 80px;
+    
+}
+
+.currentOrder__content__orderid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currentOrder__content__time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    left: 20px;
+}
+
+.currentOrder__content__status {
+    display: flex;
+    align-items: center;
+}
+
+.currentOrder__content__status > h5 {
+    position: relative;
+    left: 45px;
+}
+
+.currentOrder__content__call{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    left: 30px;
+}
+
+.currentOrder__header > h4{
+    font-family: "Roboto";
+}
+
+.currentOrder__conten__info{
+    font-family: "Sora";
+}
+
+.currentOrder__content__orderid > a > button{
+    background-color: #D2452D; 
+    color: white;
+    font-family: "Sora";
+    font-size: 10px;
+    border-radius: 20px;
+}
+
+.currentOrder__content__orderid > a > button:hover{
+    background-color: #D2452D; 
+}
+
+.currentOrder__content__call> button{
+    background-color: #D2452D; 
+    color: white;
+    font-family: "Sora";
+    font-size: 10px;
+    border-radius: 20px;
+}
+
+.currentOrder__content__call > button:hover{
+    background-color: #D2452D; 
+} */
+
+/*------------------------------------PAST ORDERS-----------------------------------------*/
+/* .pastOrder{
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.pastOrder__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:10px;
+}
+
+.pastOrder__content{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.45);
+    padding:10px;
+    border-radius: 10px;
+    height: 80px;
+    
+}
+
+.pastOrder__content__orderid{
+    display: flex;
+    align-items: center;
+}
+
+.pastOrder__content__time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    left: 20px;
+}
+
+.pastOrder__content__status {
+    display: flex;
+    align-items: center;
+}
+
+.pastOrder__content__status > h5 {
+    position: relative;
+    left: 30px;
+}
+
+.pastOrder__content__call{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 10px;
+}
+
+.pastOrder__header > h4{
+    font-family: "Roboto";
+}
+
+.pastOrder__conten__info{
+    font-family: "Sora";
+}
+
+.pastOrder__content__orderid > button{
+    background-color: #D2452D; 
+    color: white;
+    font-family: "Sora";
+    font-size: 10px;
+    border-radius: 20px;
+}
+
+.pastOrder__content__orderid > button:hover{
+    background-color: #D2452D; 
+}
+
+.pastOrder__content__call> button{
+    background-color: #D2452D; 
+    color: white;
+    font-family: "Sora";
+    font-size: 10px;
+    border-radius: 20px;
+}
+
+.pastOrder__content__call > button:hover{
+    background-color: #D2452D; 
+} */
+
+.myorders{
+    padding-top:130px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: #f2f2f2;
+    padding-bottom: 20px;
+}
+
+.myorders__tabs{
+    display: flex;
+    justify-content: center;
+}
+
+.tabLabels{
+    font-size: 14px;
+}
+
+.currentOrder{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    padding: 20px;
+    margin:10px 200px 0px 200px;
+    border: 1px solid  #9EABAD;
+}
+
+.currentOrder__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.currentOrder__title1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.currentOrder__title > p{
+    font-family: "Roboto";
+    color: #9EABAD;
+    flex:1px;
+}
+
+.currentOrder__title1 > p{
+    font-family: "Roboto";
+    font-size: 16px;
+    flex: 1px;
+}
+
+.currentOrder__lines{
+    padding: 4px 40px 4px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #9EABAD;
+}
+
+.currentOrder__lines > img{
+    height: 60px;
+}
+
+.currentOrder__lines__info{
+    margin-left: 20px;
+}
+
+.currentOrder__bottom{
+    text-align: center;
+    color: #9EABAD;
+    font-weight: bold;
+}
+
+.currentOrder__btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.currentOrder__btns > a > button {
+    margin-left: 10px;
+}
+
+.currentOrder__lines__info > p{
+    font-family: "Sora";
+}

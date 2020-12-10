@@ -1,0 +1,84 @@
+.slider{
+    margin: 0px 45px 0px 45px;
+    position: relative;
+}
+
+.shopdeals__shop{
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 0px 0px 10px 0px;
+    border: 1px solid #d9cfce;
+    /* box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75); */
+}
+
+.shopdeals__shop:hover{
+    transform: scale(1.02);
+}
+
+.shopdeals__shop > h4 {
+    margin-top: 5px;
+}
+
+.shopdeals__shop > img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.shopdeals__shop > h4{
+    font-family: "Roboto";
+}
+
+.shopdeals__shop__pricing{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shopdeals__shop__pricing > h4{
+    font-family: "Sora";
+}
+
+.shopdeals__shop__pricing > h5{
+    font-family: "Sora";
+}
+
+.shopdeals__shop__pricing > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.actualPrice{
+    font-family: "Sora";
+    text-decoration: line-through;
+}
+
+.discountPrice{
+    font-family: "Sora";
+}
+
+.slider-arrow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .arrow-btn {
+    top: 45%;
+    z-index: 1;
+  }
+
+  .next {
+    float: right;
+  }
+

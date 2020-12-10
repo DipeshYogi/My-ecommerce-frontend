@@ -1,0 +1,184 @@
+.profile{
+    padding-top:130px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile >  h2{
+    font-family: "Roboto";
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.profile1{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+.profile2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.userInfo{
+    /* box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.45); */
+    display: flex;
+    position: relative;
+    flex: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding:20px;
+    border: 1px solid #b2d1cc;
+    border-radius: 12px;
+    width: 300px;
+}
+
+/* .userInfo:hover{
+    background-color: #e1f5f2;
+} */
+
+.addressInfo{
+    /* box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.45); */
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    align-items: center;
+    background-color: white;
+    padding:20px;
+    border: 1px solid #b2d1cc;
+    border-radius: 12px;
+    width: 300px;
+}
+
+/* .addressInfo:hover{
+    background-color: #e1f5f2;
+} */
+
+.ordersInfo{
+    /* box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.45); */
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding:20px;  
+    border: 1px solid #b2d1cc;
+    border-radius: 12px;  
+    margin-left: 8px;
+    width: 300px;
+}
+
+/* .ordersInfo:hover{
+    background-color: #e1f5f2;
+} */
+
+.paymentInfo{
+    /* box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.45); */
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding:20px;
+    margin-left: 8px;
+    border: 1px solid #b2d1cc;
+    border-radius: 12px;
+    width: 300px;
+    position: relative;
+}
+
+/* .paymentInfo:hover{
+    background-color: #e1f5f2;
+} */
+
+.userInfo > div > h5 {
+    font-family: "Sora";
+    color: lightsalmon;
+}
+
+.userInfo > div > h4 {
+    font-family: "Roboto";
+}
+
+.ordersInfo > div > h5 {
+    font-family: "Sora";
+    color: lightsalmon;
+}
+
+.ordersInfo > div > h4 {
+    font-family: "Roboto";
+}
+
+.addressInfo > div > h5 {
+    font-family: "Sora";
+    color: lightsalmon;
+}
+
+.addressInfo > div > h4 {
+    font-family: "Roboto";
+}
+
+.paymentInfo > div > h5 {
+    font-family: "Sora";
+    color: lightsalmon;
+}
+
+.paymentInfo > div > h4 {
+    font-family: "Roboto";
+}
+
+.userInfo__btn{
+    position: absolute;
+    right: 15px;
+    bottom:15px;
+}
+
+.edit__container{
+    height:450px;
+    width: 500px;
+}
+
+.edit__container > h3{
+    text-align: center;
+    font-size: "Roboto";
+    margin-top: 15px;
+    color: lightsalmon;
+}
+
+.edit__close{
+    position: absolute;
+    top:2px;
+    right:2px;
+}
+
+.login__date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 75px 0px 75px;
+    width: 100%;
+}
+
+.login__date__gender{
+    margin-top: 8px;
+}
+
+.ordersInfo__btn{
+    position: absolute;
+    right:15px;
+    bottom: 15px;
+}

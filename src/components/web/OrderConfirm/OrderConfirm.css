@@ -1,0 +1,18 @@
+.orderconfirm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 130px 0px 50px 0px;
+}
+
+.orderconfirm > h1{
+    font-family: 'Roboto';
+}
+
+.orderconfirm__btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    width: 15%;;
+}

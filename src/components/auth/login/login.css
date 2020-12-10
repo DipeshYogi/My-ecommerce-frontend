@@ -1,0 +1,99 @@
+.login_screen{
+    padding-top: 0px;
+    padding-bottom: 20px;
+    height: 100vh;
+}
+
+.login{
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__title{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login__title > h2{
+    font-family: "Roboto";
+}
+
+.login__view{
+    border: 1px solid #daebea;
+    border-radius: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-bottom: 30px;
+    min-width: 500px;
+}
+
+.login__logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login__field{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.login__field > h5 {
+    /* font-weight: bold; */
+    font-family: "Sora";
+}
+
+.login__field__input{
+    margin-left: 4px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid grey;
+    width: 200px;
+}
+
+.login__field__input > input{
+    background-color: transparent;
+    outline-width: 0;
+    border: none;
+    height:25px;
+    padding-left: 10px;
+    width: 95%;
+}
+
+.login__submit{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.login__submit > button{
+    font-family: "Sora";
+    font-size: 11px;
+}
+
+.login__register{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+.login__register > p {
+    font-family: 'Sora';
+}
+
+.login__register > a {
+    margin-left: 3px;
+    font-family: 'Roboto'
+}

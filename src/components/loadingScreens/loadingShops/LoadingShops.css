@@ -1,0 +1,22 @@
+.shop__load{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.shop__load__container{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: 600px; */
+}
+
+.shop__load__info{
+    display:flex;
+    flex-direction: column;
+    flex:1px;
+    margin-left: 10px;
+}

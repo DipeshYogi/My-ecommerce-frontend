@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.cat__load{
+    display: grid;
+    grid-template-columns: 361px 361px 361px;
+    grid-gap: 5px;
+    margin-top: 8px;
+}
+
+.cat__load__container{
+  padding: 5px 0px 5px 0px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

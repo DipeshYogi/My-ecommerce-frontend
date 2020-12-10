@@ -1,0 +1,107 @@
+.containerStyles{
+    padding-top:130px;
+    padding-bottom: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+    flex:1px;
+    min-height: 100vh;
+}
+
+/* .items{
+    display:flex;
+    flex-direction: row;
+    float: 1px;
+    align-items: center;
+    background-color: white;
+    margin-top: 10px;
+    padding:10px 60px 10px 60px;
+    box-shadow: 0px 4px 7px -7px black;
+}
+
+.itemStyle{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.itemStyle > div {
+    margin-left: 10px;
+}
+
+.itemStyle > div > h4 {
+    font-family: "Sora";
+}
+
+.itemStyle > div > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.discountStyle{
+    margin-left: 20px;
+    font-family: "Sora";
+    text-decoration: line-through;
+}
+
+.saveStyle{
+    margin-left: 20px;
+    font-family: "Sora";
+} */
+
+.item__container{
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-gap: 10px;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.items__pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.items__pricing > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footerBtn{
+    text-transform: none;
+    background-color: white;
+}
+
+.styleFooter{
+    font-size:20px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left:0px;
+    bottom: 0px;
+    height: 70px;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.btnGroup{
+    /* display: flex;
+    align-self: flex-end; */
+    margin-left: auto;
+}

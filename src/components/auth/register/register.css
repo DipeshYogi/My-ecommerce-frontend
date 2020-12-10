@@ -1,0 +1,88 @@
+.register_screen{
+    /* padding-bottom: 20px; */
+    height: 100vh;
+
+}
+
+.register{
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register__title{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.register__title > h2{
+    font-family: "Roboto";
+}
+
+.register__view{
+    border: 1px solid #daebea;
+    border-radius: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+    padding-bottom: 40px;
+    padding-left: 55px;
+    padding-right: 55px;
+    min-width: 500px;
+}
+
+.register__logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.register__field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.register__field > h5 {
+    /* font-weight: bold; */
+    font-family: "Sora";
+}
+
+.register__field__input{
+    margin-left: 4px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 2px;
+    padding-left: 10px;
+    border: 1px solid grey;
+    width: 200px;
+}
+
+.register__field__input > input{
+    background-color: transparent;
+    outline-width: 0;
+    border: none;
+    outline: none;
+    height:25px;
+    width: 95%;
+}
+
+.register__submit{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.register__submit > button{
+    font-family: "Sora";
+    font-size: 11px;
+}
