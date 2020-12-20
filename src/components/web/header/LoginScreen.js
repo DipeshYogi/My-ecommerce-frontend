@@ -24,7 +24,7 @@ class LoginScreen extends React.Component{
       <div className="login__container">
         <div className="login__header blueShadeBackground">
           <div className="login__header__img">
-            <img src={require("../../../assets/Icon.png")} height='80' />
+            <img src={require("../../../assets/myecom.png")} height='90' />
           </div>
           <h3>Login</h3>
         </div>

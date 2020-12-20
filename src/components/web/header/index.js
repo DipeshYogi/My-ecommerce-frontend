@@ -65,13 +65,12 @@ class Header extends Component {
     const { setSticky } = this.state;
     return (
       <div>                  
-        {/* <Grid container className={setSticky?'header__sticky':''}>  */}
         <Grid container className="header__sticky"> 
           <Grid item xs={12} className="blueShadeBackground">
             <div className="header1">
                 <Link to='/'>
                 <div className="header1__logo">                
-                    <img src={require("../../../assets/Icon.png")} height='45' />                                     
+                    <img src={require("../../../assets/myecom.png")} height='55' />                                     
                 </div>       
                 </Link>             
                 <div className="header1__search">
@@ -105,9 +104,6 @@ class Header extends Component {
                                 Logout
                         </Link>
                     </Button>
-                    </div>
-                    }                               
-
                     <div className="header1__info__cart">
                       <Link to="/carts">
                         <Button style={{borderRadius:50}}>
@@ -168,6 +164,9 @@ class Header extends Component {
                         </Button>                                  
                       </Link>
                     </div>
+                    </div>
+                    }                               
+
                 </div>
             </div>
           </Grid>

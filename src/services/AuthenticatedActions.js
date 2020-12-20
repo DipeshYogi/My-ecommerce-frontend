@@ -15,7 +15,7 @@ export const doGetRequest = (url, actionType, msg) => (dispatch) =>{
   ) 
 }
 
-export const doPostRequest = (url, actionType, formData, msg) => (dispatch) =>{
+export const doPostRequest = (url, actionType, formData, msg, payload) => (dispatch) =>{
   let auth_token = localStorage.getItem('access_token')
   if(auth_token){
     requestInstance.defaults.headers['Authorization'] = 'Bearer ' + auth_token;
@@ -24,7 +24,7 @@ export const doPostRequest = (url, actionType, formData, msg) => (dispatch) =>{
     dispatch({type:actionType, status:STARTING, response:undefined}),
     requestInstance.post(url, formData)
       .then(res =>{
-        dispatch({type:actionType, status:SUCCESS, response:res.data})
+        dispatch({type:actionType, status:SUCCESS, response:res.data, payload})
         if(msg) {
           dispatch(createMessage({successMsg:msg.successMsg}))
         }

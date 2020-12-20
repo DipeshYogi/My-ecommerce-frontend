@@ -36,6 +36,19 @@
     min-height: 220px;
 }
 
+.noshopListContainer{
+  padding-top:190px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 300px;
+}
+
+.noshopListContainer > h3{
+  font-family: 'Sora';
+  text-align: center;
+}
+
 .filterContainer{
     padding-top:150px;
     padding-bottom: 20px;

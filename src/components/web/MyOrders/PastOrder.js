@@ -17,8 +17,7 @@ function PastOrder({getUserOrders, orders}){
     }, [])
 
     useEffect(()=> {
-      console.log(orders)
-      if(orders){
+      if(orders.HeaderInfo){
         let ord = orders.HeaderInfo.filter(ord => ord.HSTS !== 'ONGOING')
         setActiveOrd(ord)
         setOrdLines(orders.LineInfo)

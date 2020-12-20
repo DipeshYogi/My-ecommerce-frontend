@@ -41,8 +41,10 @@ class MyAddresses extends React.Component{
     this.setState({addAddress:false, editAddress:false})
   }
 
-  changeActiveAddress = (id) => {
+  changeActiveAddress = (id, is_active) => {
+    if(!is_active){
     this.props.updateActiveAddress(id);
+    }
   }
 
   render(){
@@ -81,7 +83,7 @@ class MyAddresses extends React.Component{
               <div className="myaddress__addr__info"> 
                 <Checkbox
                   checked={add.is_active}
-                  onChange = {()=>this.changeActiveAddress(add.id)}
+                  onChange = {()=>this.changeActiveAddress(add.id, add.is_active)}
                 />
                 <div>
                   <h4>{add.address1}</h4>
@@ -103,7 +105,7 @@ class MyAddresses extends React.Component{
                   <Button
                     className={classes.btnStyle2}
                     onClick={()=> 
-                      this.props.deleteUserAddress(add.address1, add.address2, add.pincode, add.phone)}>
+                      this.props.deleteUserAddress(add.id)}>
                     Delete
                   </Button>
                 </div>

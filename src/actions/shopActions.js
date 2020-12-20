@@ -25,8 +25,7 @@ export const clearSelectedShops = () => {
 
 export const getShopItems = (id, shop_name) => dispatch => {
     // let url = `shopkeeper/shop-profile/items/${id}`;
-    let url = 'shopkeeper/shop-profile/items/'+ id;
-    console.log(url)
+    let url = 'shopkeeper/shop-profile/shop-items/'+ id + '/';
 
     dispatch(doGetRequest(url, GET_SHOP_ITEMS))
     dispatch({type:STORE_SHOP_INFO, payload:{id:id, name:shop_name}})

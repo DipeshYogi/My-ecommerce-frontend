@@ -2,7 +2,8 @@ import axios from 'axios';
 import {store} from '../store.js';
 import {LOGOUT} from '../actions/types';
 
-const BASE_URL = 'http://127.0.0.1:8000/';
+// const BASE_URL = 'http://127.0.0.1:8000/';
+const BASE_URL = 'https://bonoapebackend.herokuapp.com/';
 const {dispatch} = store;
 
 const requestInstance = axios.create({

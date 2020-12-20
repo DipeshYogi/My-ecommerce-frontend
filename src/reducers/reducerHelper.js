@@ -11,7 +11,6 @@ const reducerHelper = {
         isLoading = true
         break;
       case SUCCESS:
-        console.log(action.response)
         if(action.response !== undefined && action.response !== null) {
           if (Array.isArray(action.response)){
             resultData = action.response.length > 0 ? Array.from(action.response) : emptyData;
