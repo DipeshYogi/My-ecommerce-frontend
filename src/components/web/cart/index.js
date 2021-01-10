@@ -155,14 +155,18 @@ class Cart extends React.Component{
                                   this.props.cartItems.reduce((accum, item)=> accum+(item.quantity*item.discount), 0 )
                           } on this order</div>
                       </div>
-                      <div>
-                        <Button 
-                          variant="outlined"
-                          className={classes.btnAddr}
-                          onClick={()=> this.placeOrder()}>
-                            Place Order
-                        </Button> 
-                      </div>
+                      {this.props.cartItems.length !== 0 ?
+                        <div>
+                          <Button 
+                            variant="outlined"
+                            className={classes.btnAddr}
+                            onClick={()=> this.placeOrder()}>
+                              Place Order
+                          </Button> 
+                        </div>
+                        :
+                        null
+                      }
                   </div>
               </Grid>
              </Grid>

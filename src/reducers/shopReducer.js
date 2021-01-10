@@ -1,6 +1,7 @@
 import { GET_SHOP_CAT, GET_SHOP_BY_CAT, CLEAR_SHOPS, GET_SHOP_ITEMS,
          ADD_ITEM_TO_CART, REMOVE_ITEM_FROM_CART, CLEAR_CURRENT_CART,
-         CURRENT_CAT, STORE_SHOP_INFO, initialEmptyResult } from '../actions/types.js';
+         CURRENT_CAT, STORE_SHOP_INFO, GET_TOP_DEALS, GET_TOP_SHOPS,
+         initialEmptyResult } from '../actions/types.js';
 import reducerHelper from './reducerHelper';
 
 const initialState = {
@@ -13,6 +14,8 @@ const initialState = {
     cartShopName: [],
     cartShopUserId:[], //shopuserid for current shop cart
     addedItems: [], //item added to cart
+    topdeals:initialEmptyResult, //top deals from all shops and categories
+    topshops: initialEmptyResult //top rated registered shop
 }
 
 const ShopReducer = (state=initialState, action) => {
@@ -99,8 +102,20 @@ const ShopReducer = (state=initialState, action) => {
                 cartShopName: [],
                 cartShopUserId:[], 
                 addedItems: []             
-            } 
+            }
         
+        case GET_TOP_DEALS:
+            return {
+                ...state,
+                topdeals: reducerHelper.handleRequestData(action)
+            }
+        
+        case GET_TOP_SHOPS:
+            return {
+              ...state,
+              topshops: reducerHelper.handleRequestData(action)
+            }
+    
         default:
             return state
     }

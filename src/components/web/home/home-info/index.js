@@ -15,15 +15,6 @@ const HomeScreen = ({getShopCat}) => {
     HandleScrollPosition('homeScrollPos');
   }, [])
 
-  // handle scroll position after content load
-  // const handleScrollPosition = () => {
-  //   const homeScrollPos = sessionStorage.getItem("homeScrollPos");
-  //   if (homeScrollPos) {
-  //     window.scrollTo(0, parseInt(homeScrollPos));
-  //     sessionStorage.removeItem("homeScrollPos");
-  //   }
-  // };
-
   const classes = useStyles()
   const history = useHistory()
 
@@ -34,8 +25,7 @@ const HomeScreen = ({getShopCat}) => {
             <h3>Shop Categories</h3>
         </div>
         <Box mt={1}>
-          <CategoryView start={0} end={3} img={'https://www.thehindubusinessline.com/economy/3devif/article24323505.ece/ALTERNATES/LANDSCAPE_1200/bl04dairy%20product'}/>
-          <CategoryView start={3} end={6} img={'https://c.ndtvimg.com/2019-11/2kakjdo8_fruits_625x300_27_November_19.jpg'}/>                              
+          <CategoryView start={0} end={6} />
         </Box>
 
         <Box mt={2} align='center'>

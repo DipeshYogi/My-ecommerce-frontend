@@ -75,3 +75,8 @@
   justify-content: center;
   color: white;
 }
+
+.cat__error > p{
+  text-align: center;
+  font-family: 'Sora';
+}
