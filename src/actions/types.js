@@ -23,6 +23,8 @@ export const ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART'; //Add an item to cart
 export const REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART'; //Remove item from cart
 export const CLEAR_CURRENT_CART = 'CLEAR_CURRENT_CART'; //Clear current cart content
 export const FILTER_SHOPS = 'FILTER_SHOPS'; // Filter applied to shop list
+export const GET_TOP_DEALS = 'GET_TOP_DEALS'; //Fetch top deals
+export const GET_TOP_SHOPS = 'GET_TOP_SHOPS'; //Fetch top shops
 
 //Cart actions
 export const ADD_TO_CART = 'ADD_TO_CART';

@@ -67,6 +67,10 @@
     border-radius: 10px;
 }
 
+.items > h4{
+  font-family: 'Sora';
+}
+
 .items__pricing{
     display: flex;
     flex-direction: column;

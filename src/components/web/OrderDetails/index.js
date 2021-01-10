@@ -58,7 +58,7 @@ class OrderDetails extends React.Component{
                   </p>
                 </div>
                 <div>
-                  <h4>Payment Amount</h4>
+                  <h4>Payment Type</h4>
                   <p>Cash On Delivery</p>
                 </div>
               </div>   

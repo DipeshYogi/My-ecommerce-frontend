@@ -51,10 +51,13 @@ function CurrentOrder({getUserOrders, orders}){
                 </div>
               </div>
           ))}
-
-          <div className="currentOrder__bottom">
-            <p>+{ordLines.filter(line => line.LORD === ord.HORD).length - 2} items more</p>
-          </div>
+          {ordLines.filter(line => line.LORD === ord.HORD).length > 2 ?
+            <div className="currentOrder__bottom">
+              <p>+{ordLines.filter(line => line.LORD === ord.HORD).length - 2} items more</p>
+            </div>
+            :
+            null
+          }
           <div className="currentOrder__btns">
             <Link to={{pathname:'/order-details', HORD: ord.HORD}}>
             <Button
