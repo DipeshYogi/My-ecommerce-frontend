@@ -57,19 +57,19 @@ class Footer extends Component {
                         </ul>
                         <div className=" address">
                             <div className="col-md-4 fo-grid1">
-                                <p><i className="fa fa-home" aria-hidden="true" />Bangalore, India.</p>
+                                <p><i className="fa fa-home" aria-hidden="true" />Pune, India.</p>
                             </div>
                             <div className="col-md-4 fo-grid1">
-                                <p><i className="fa fa-phone" aria-hidden="true" />+91 8972635211</p>
+                                <p><i className="fa fa-phone" aria-hidden="true" />+91 9764097982</p>
                             </div>
                             <div className="col-md-4 fo-grid1">
-                                <p><Link to="/gmail.com"><i className="fa fa-envelope-o" aria-hidden="true" />karan.james@hubete.com</Link></p>
+                                <p><Link to="/gmail.com"><i className="fa fa-envelope-o" aria-hidden="true" />dipeshyogi94@gmail.com</Link></p>
                             </div>
                             <div className="clearfix" />
                         </div>
                     </div>
                     <div className="copy-right">
-                        <p> © 2020 BonoApe. All Rights Reserved</p>
+                        <p> © 2020 MyEcom. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

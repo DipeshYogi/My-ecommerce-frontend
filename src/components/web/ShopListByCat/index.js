@@ -28,7 +28,7 @@ class ShopListByCat extends React.Component {
   componentDidUpdate(prevProps, prevState){
       const {data, isLoading} = this.props.selectedShops
       if(prevProps.selectedShops !== this.props.selectedShops){
-          this.setState({shops:data, isLoading:isLoading, freeDelivery:false, isVerified:false})
+          this.setState({shops:data, isLoading:isLoading, freeDelivery:false, isVerified:false, baggitfilter:false})
       }
   }
 
@@ -51,17 +51,17 @@ class ShopListByCat extends React.Component {
   }
 
   applyFilters = () =>{
-    const {freeDelivery, isVerified, baggitfilter}= this.state
+    const {freeDelivery, isVerified, baggitfilter}= this.state;
 
     this.setState({shops:this.props.selectedShops.data}, () =>{
         if(freeDelivery===true){
-            this.setState({shops: this.state.shops.filter(shop => shop.free_delivery === true)})
-            }
-        if(baggitfilter===true){
-            this.setState({shops: this.state.shops.filter(shop => shop.baggit_support === true)})
+            this.setState((state) => ({shops: state.shops.filter(shop => shop.free_delivery === true)}));
             }
         if(isVerified===true){
-            this.setState({shops: this.state.shops.filter(shop => shop.is_verified === true)})
+            this.setState((state) => ({shops: state.shops.filter(shop => shop.is_verified === true)}));
+            }
+          if(baggitfilter===true){
+            this.setState((state) => ({shops: state.shops.filter(shop => shop.baggit_support === true)}));
             }
 
     })
@@ -87,7 +87,7 @@ class ShopListByCat extends React.Component {
               <Box display='flex' flexDirection='row' alignItems='center'>
                   <Checkbox
                           checked={this.state.freeDelivery}
-                          onChange={()=>this.toggleFreeDelivery()}
+                          onChange={this.toggleFreeDelivery}
                   />
                   <Typography variant='h6' style={{fontFamily:"Sora"}}>Free Delivery</Typography>
               </Box>
@@ -111,58 +111,63 @@ class ShopListByCat extends React.Component {
             </div>
           </Grid>
           <Grid item lg={10} md={9} xl={9} xs={12}>
+            {isLoading === false && this.state.shops.length === 0 ?
+            <div className="noshopListContainer grayShadeBackground">
+              <h3>Currently no shops available for this category..</h3>
+            </div> :
             <div className="shopListContainer grayShadeBackground">
-                <Box pb={2}>
-                <Typography variant="h2" style={{fontFamily:"Roboto"}}>{this.props.selectedCat}</Typography>
-                </Box>
-                {isLoading ? 
-                <LoadingShops/>
-                 :
-                <div className="shop">
-                  {this.state.shops.map((shop)=>(
-                    <div className="shop__container whiteShadeBackground">
-                      <img src="https://previews.123rf.com/images/rastudio/rastudio1608/rastudio160800769/61001834-shop-store-vector-sketch-icon-isolated-on-background-hand-drawn-shop-store-icon-shop-store-sketch-ic.jpg" 
-                            height={180}/>
-                      <div className="shop__info"> 
-                        <h4>{shop.shop_name}</h4>
-                        <Rating value={4} readOnly size='large'/>
-                        <p className="darkGrayColor">(214 ratings)</p>
-                        <div className="shop__btn">
-                          <Link to='/shop-items'>
-                            <Button variant="contained" className={classes.btnStyle}
-                                    onClick={()=>this.onShopClick(shop.shopid, shop.shop_name)}
-                            >
-                                <Typography className={classes.btnText}>Jump In</Typography>
-                            </Button>
-                          </Link>
+              <Box pb={2}>
+              <Typography variant="h2" style={{fontFamily:"Roboto"}}>{this.props.selectedCat}</Typography>
+              </Box>
+              {isLoading ? 
+              <LoadingShops/>
+              :
+              <div className="shop">
+                {this.state.shops.map((shop)=>(
+                  <div className="shop__container whiteShadeBackground">
+                    <img src="https://previews.123rf.com/images/rastudio/rastudio1608/rastudio160800769/61001834-shop-store-vector-sketch-icon-isolated-on-background-hand-drawn-shop-store-icon-shop-store-sketch-ic.jpg" 
+                          height={180}/>
+                    <div className="shop__info"> 
+                      <h4>{shop.shop_name}</h4>
+                      <Rating value={4} readOnly size='large'/>
+                      <p className="darkGrayColor">(214 ratings)</p>
+                      <div className="shop__btn">
+                        <Link to='/shop-items'>
+                          <Button variant="contained" className={classes.btnStyle}
+                                  onClick={()=>this.onShopClick(shop.shopid, shop.shop_name)}
+                          >
+                              <Typography className={classes.btnText}>Jump In</Typography>
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>  
+                    <div className="shop__attributes">
+                        {shop.baggit_support  ?
+                        <div>
+                          <LocalMallOutlinedIcon/>
+                          <p>Bag it</p>
                         </div>
-                      </div>  
-                      <div className="shop__attributes">
-                          {shop.baggit_support  ?
-                          <div>
-                            <LocalMallOutlinedIcon/>
-                            <p>Bag it</p>
-                          </div>
-                          :
-                          null
-                          }
-                          {shop.free_delivery ?
-                          <div>
-                            <LocalShippingOutlinedIcon/>
-                            <p>Free Delivery</p>
-                          </div>: null }
-                          {shop.is_verified  ?
-                          <div>
-                            <VerifiedUserTwoToneIcon/>
-                            <p>Verified business</p>
-                          </div>: null }
-                        </div>                      
-                    </div>
-                  ))}
+                        :
+                        null
+                        }
+                        {shop.free_delivery ?
+                        <div>
+                          <LocalShippingOutlinedIcon/>
+                          <p>Free Delivery</p>
+                        </div>: null }
+                        {shop.is_verified  ?
+                        <div>
+                          <VerifiedUserTwoToneIcon/>
+                          <p>Verified business</p>
+                        </div>: null }
+                      </div>                      
+                  </div>
+                ))}
 
-                </div>
-                }
+              </div>
+              }
             </div>
+            }
           </Grid>
         </Grid>
       </div>

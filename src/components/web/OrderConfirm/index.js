@@ -1,13 +1,21 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import './OrderConfirm.css';
-import {Button, makeStyles} from '@material-ui/core';
+import {Button, makeStyles, CircularProgress} from '@material-ui/core';
+import {connect} from 'react-redux';
 
-const OrderConfirm = () =>{
+const OrderConfirm = ({orderdata}) =>{
   const classes = useStyles()
   const history = useHistory()
 
-  return(
+  if(orderdata.isLoading){ 
+    return(
+    <div className="orderconfirm">
+    <CircularProgress />
+    <p>Confirming Order</p>
+    </div> )
+  }else{
+    return(
     <div className="orderconfirm">
       <h1>Order Placed Successfully</h1>
       <img src={require('../../../assets/order_success.jpg')} height={200} />
@@ -22,7 +30,7 @@ const OrderConfirm = () =>{
           onClick={()=> history.push('/my-orders')}>Order Page</Button>        
       </div>
     </div>
-  )
+  )}
 }
 
 const useStyles = makeStyles({
@@ -37,4 +45,8 @@ const useStyles = makeStyles({
   }
 })
 
-export default OrderConfirm;
+const mapStateToProps = (state) => ({
+  orderdata: state.orderReducer.order
+})
+
+export default connect(mapStateToProps)(OrderConfirm);

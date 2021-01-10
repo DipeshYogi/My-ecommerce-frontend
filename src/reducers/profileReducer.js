@@ -35,15 +35,16 @@ const profileReducer = (state=initialState, action) =>{
       }
     case DELETE_ADDRESS:
       let upd_addr = []
-      if(action.payload){
-        let del = action.payload;
-        upd_addr = state.addr.filter((add) => 
-                        add.address1 !== del.add1 && add.address2 !== del.add2 &&
-                        add.pincode !== del.pin && add.phone !== del.phone);
+      if(action.status === 'SUCCESS'){
+        if(action.payload){
+          let delId = action.payload;
+          upd_addr = state.addr.filter((add) => 
+                          add.id !== delId);
+        }
       }
       return{
         ...state,
-        addr: action.payload? upd_addr : state.addr
+        addr: action.payload && action.status==='SUCCESS'? upd_addr : state.addr
       }
     case UPD_ACTIVE_ADDR:
       let addresses = []

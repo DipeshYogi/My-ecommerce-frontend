@@ -24,10 +24,7 @@ export const updateUserInfo = (id, name, email, phone, dob) => dispatch =>{
     formdata.append("email", email)
     formdata.append("phone", phone)
     formdata.append("date_of_birth", dob.getDate()+"/"+(dob.getMonth()+1)+"/"+dob.getFullYear())
-    console.log(id)
-    console.log(name)
-    console.log(email)
-    console.log(dob.getDate()+"/"+(dob.getMonth()+1)+"/"+dob.getFullYear())
+
     let url = 'accounts/update/' + id +'/';
     let msg = {successMsg:'Profile Updated', failureMsg:'Could not update'}
     dispatch(doPutRequest(url, UPDATE_PROFILE, formdata, msg))
@@ -51,20 +48,13 @@ export const addUserAddress = (add1, add2, pin, phone) => dispatch =>{
 
 }
 
-export const deleteUserAddress = (add1, add2, pin, phone) => dispatch =>{
-    let url = 'customer/address/delete/';
-    let formData = new FormData();
-    formData.append('address1', add1)
-    formData.append('address2', add2)
-    formData.append('pincode', pin)
-    formData.append('phone', phone)
+export const deleteUserAddress = (id) => dispatch =>{
+    let url = 'customer/address/delete/'+id+'/';
     let msg = {successMsg:'Deleted', failureMsg:'Could not delete'};
+    let payload = id
+    let formData = undefined
 
-    dispatch(doPostRequest(url, DELETE_ADDRESS, formData, msg));
-    dispatch({
-              type: DELETE_ADDRESS,
-              payload:{'add1':add1, 'add2':add2, 'pin':pin, 'phone':phone }})
-
+    dispatch(doPostRequest(url, DELETE_ADDRESS, formData, msg, payload))
 }
 
 export const updateUserAddress = (id, addr1, addr2, pin, phone, is_active) => dispatch => {

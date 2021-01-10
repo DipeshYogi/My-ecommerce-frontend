@@ -8,7 +8,6 @@ import {connect} from 'react-redux';
 
 class RegisterScreen extends React.Component{
   state={
-    access: 'ROLE_USER',
     username:'',
     email: '',
     phno:'',
@@ -73,7 +72,7 @@ class RegisterScreen extends React.Component{
       <div className="register__container">
         <div className="register__header blueShadeBackground">
           <div className="register__header__img">
-            <img src={require("../../../assets/Icon.png")} height='80' />
+            <img src={require("../../../assets/myecom.png")} height='90' />
           </div>
           <h3>Register</h3>
         </div>

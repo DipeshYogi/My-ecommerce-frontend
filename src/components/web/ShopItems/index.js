@@ -39,9 +39,8 @@ class ShopItems extends React.Component{
     render(){
         const {classes} = this.props;
         const {items, isLoading} = this.state;
-
         return(
-            <div className="containerStyles grayShadeBackground">
+          <div className="containerStyles grayShadeBackground">
               <div>
                 <Box pb={2}>
                   <Typography variant="h2">{this.props.shopName}</Typography>
@@ -99,11 +98,11 @@ class ShopItems extends React.Component{
                       </Button>}
                     </div>
                   </div>
-                ))
-                }   
-                </div>                                                                                                                                                                                                                                  
+                  ))
+                  }   
+                  </div>                                                                                                                                                                                                                                  
                 }
-              </div>
+                </div>
               {this.props.cart.length>0 && this.state.cartConflict===false ?
                 <div className="styleFooter blueShadeBackground" >
                     <div className={classes.footer__left}>
@@ -149,6 +148,7 @@ class ShopItems extends React.Component{
                 </Modal>
             </div>
         )
+        
     }
 }
 
