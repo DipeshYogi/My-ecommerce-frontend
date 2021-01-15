@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 
@@ -9,7 +9,7 @@ class Footer extends Component {
                 <div className="footer__container">
                     <div className="col-md-3 footer-grid">
                         <h3>About Us</h3>
-                        <p>Hey this is Hubete</p>
+                        <p>Hey this is MyEcom</p>
                     </div>
                     <div className="col-md-3 footer-grid ">
                         <h3>Top Categories</h3>

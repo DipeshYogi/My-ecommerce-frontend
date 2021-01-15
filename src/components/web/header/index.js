@@ -14,6 +14,8 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Dialog from '@material-ui/core/Dialog';
 import CloseIcon from '@material-ui/icons/Close';
+import {isMobile} from 'react-device-detect';
+
 
 class Header extends Component {
   state = {
@@ -195,31 +197,34 @@ class Header extends Component {
                 null
                 }
 
-
-                <div className={`${this.state.disableHover?'dropdown1':'dropdown'}`}>
-                  <Button className="dropbtn"
-                        onClick={()=>this.setState({dropdownMode:!this.state.dropdownMode})}>
-                    <h5 className="headerCat">Categories<i class="fa fa-caret-down"></i></h5>
-                  </Button>
-                  
-                  <div className="dropdown__content">
-                    <div className="dropdown__content__cat"> 
-                      {this.props.categories.map(cat=>(
-                        <div className="dropdown__items">  
-                          <Link to="/shop-category" onClick= {()=>
-                              this.setState({disableHover:true}, ()=>{
-                                this.getShopByCategory(cat.cat_name)
-                              })
-                          } >
-                          <Button>
-                              <h5 className="headerCat">{cat.cat_name}</h5>
-                          </Button> 
-                          </Link>
-                        </div>
-                      ))}
+                {isMobile ? 
+                  null
+                  :
+                  <div className={`${this.state.disableHover?'dropdown1':'dropdown'}`}>
+                    <Button className="dropbtn"
+                          onClick={()=>this.setState({dropdownMode:!this.state.dropdownMode})}>
+                      <h5 className="headerCat">Categories<i class="fa fa-caret-down"></i></h5>
+                    </Button>
+                    
+                    <div className="dropdown__content">
+                      <div className="dropdown__content__cat"> 
+                        {this.props.categories.map(cat=>(
+                          <div className="dropdown__items">  
+                            <Link to="/shop-category" onClick= {()=>
+                                this.setState({disableHover:true}, ()=>{
+                                  this.getShopByCategory(cat.cat_name)
+                                })
+                            } >
+                            <Button>
+                                <h5 className="headerCat">{cat.cat_name}</h5>
+                            </Button> 
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
+                }
             </div>
           </Grid>                    
         </Grid>
